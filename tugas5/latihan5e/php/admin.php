@@ -51,8 +51,9 @@ if(isset($_POST["cari"]) ) {
 	<div class="add">
      <a href="tambah.php"><button>Tambah Data</button></a>
      <form action="" method="post"> <br>
-         <input type="text" name="keyword" autofocus autocomplete="off">
+         <input type="text" name="keyword" autofocus autocomplete="off"><br><br>
          <button type="submit" name="cari">Cari</button>
+         <button type="submit" name="kembali">Kembali</button>
      </form> 
      <br>
     </div>
