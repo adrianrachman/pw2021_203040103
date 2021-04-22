@@ -34,7 +34,7 @@ $otomotif = query("SELECT * FROM otomotif")
     </div>
     <table border="1" cellspacing="13" cellspacing="0">
 		<tr>
-			<th>#</th>
+			<th>No</th>
 			<th>opsi</th>
 			<th>Gambar</th>
             <th>Nama Barang</th>
@@ -48,13 +48,13 @@ $otomotif = query("SELECT * FROM otomotif")
 				<td><?= $i; ?></td>
 				<td>
 					<a href=""><button>Ubah</button></a>
-					<a href="hapus.php?id=<?= $om['id'] ?>" onclick="return confirm('Hapus Data?')"><button>Hapus</button></a>
+					<a href="hapus.php?id=<?= $om["id"] ?>" onclick="return confirm('Hapus Data?')"><button>Hapus</button></a>
 				</td>
-				<td><img src="../assets/img/<?= $om['gambar']; ?>" alt=""></td>
-				<td><?= $om['namabarang']; ?></td>
-                <td><?= $om['deskripsi']; ?></td>
-                <td><?= $om['harga']; ?></td>
-                <td><?= $om['merk']; ?></td>
+				<td><img src="../assets/img/<?= $om["gambar"]; ?>" alt=""></td>
+				<td><?= $om["namabarang"]; ?></td>
+                <td><?= $om["deskripsi"]; ?></td>
+                <td><?= $om["harga"]; ?></td>
+                <td><?= $om["merk"]; ?></td>
 			</tr>
 			<?php $i++; ?>
 		<?php endforeach; ?>

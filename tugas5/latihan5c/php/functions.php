@@ -33,7 +33,7 @@ function tambah($data)
 	
 	$query = "INSERT INTO otomotif
 					VALUES
-					('', '$gambar', '$namabarang', 'deskripsi', '$harga', '$merk')";
+					('', '$gambar', '$namabarang', '$deskripsi', '$harga', '$merk')";
 
 	mysqli_query($conn, $query);
 

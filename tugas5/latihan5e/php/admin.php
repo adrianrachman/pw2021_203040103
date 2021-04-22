@@ -1,20 +1,34 @@
 <?php 
 // menghubungkan dengan file php lainnya
 require 'functions.php';
+$otomotif = query("SELECT * FROM otomotif");
 
-// melakukan query
-$otomotif = query("SELECT * FROM otomotif")
+// tombol cari ditekan
+if(isset($_POST["cari"]) ) {
+    $otomotif = cari($_POST["keyword"]);
+}
 
 ?>
+
+<?php if (empty($otomotif)) : ?>
+    <tr>
+        <td colspan="7">
+            <h1>Data tidak ditemukan</h1>
+        </td>
+    </tr>
+<?php endif; ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <title>Otomotif</title>
     <style>
         .table {
-            width: 100%;
+            width: 50%;
             padding: 10px;
             font-family: arial;
             text-align: center;
@@ -22,17 +36,27 @@ $otomotif = query("SELECT * FROM otomotif")
         th {
             background-color: black;
             color: white;
+            padding: 5px;
+            border: 10px;
         }
         img {
-            max-width: 150px;
+            max-width: 100px;
+        }
+        body {
+            background-color: azure;
         }
     </style>
 </head>
 <body>
 	<div class="add">
-     <a href="tambah.php"><button>Tambah Data</button></a>   
+     <a href="tambah.php"><button>Tambah Data</button></a>
+     <form action="" method="post"> <br>
+         <input type="text" name="keyword" autofocus autocomplete="off">
+         <button type="submit" name="cari">Cari</button>
+     </form> 
+     <br>
     </div>
-    <table border="1" cellspacing="13" cellspacing="0">
+    <table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>No</th>
 			<th>opsi</th>
@@ -59,5 +83,6 @@ $otomotif = query("SELECT * FROM otomotif")
 			<?php $i++; ?>
 		<?php endforeach; ?>
 	</table>
+
 </body>
 </html>

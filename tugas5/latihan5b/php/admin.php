@@ -34,7 +34,7 @@ $otomotif = query("SELECT * FROM otomotif")
     </div>
     <table border="1" cellspacing="13" cellspacing="0">
 		<tr>
-			<th>#</th>
+			<th>No</th>
 			<th>opsi</th>
 			<th>Gambar</th>
             <th>Nama Barang</th>

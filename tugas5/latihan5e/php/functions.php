@@ -72,4 +72,15 @@ function ubah($data)
 
 	return mysqli_affected_rows($conn);
 }
+
+function cari($keyword) {
+	$query = "SELECT * FROM otomotif
+				WHERE
+            namabarang LIKE '%$keyword%' OR
+            deskripsi LIKE '%$keyword%' OR
+            harga LIKE '%$keyword%' OR
+            merk LIKE '%$keyword%' 
+            ";
+    return query($query);
+}
 ?>

@@ -1,9 +1,7 @@
 <?php
-
-
 require 'functions.php';
 
-if (isset($_POST["submit"])) {
+if (isset($_POST['tambah'])) {
 	if (tambah($_POST) > 0) {
 		echo "<script>
 					alert('Data berhasil ditambahkan');
@@ -25,7 +23,7 @@ if (isset($_POST["submit"])) {
 	<title></title>
 </head>
 <body>
-	<h2>Form Tambah Data Otomotif</h2>
+	<h3>Form Tambah Data Otomotif</h3>
 	<form action="" method="post">
 		<ul>
 			<li>
@@ -60,7 +58,7 @@ if (isset($_POST["submit"])) {
 				</select><br><br>
 			</li>
 			<br>
-			<button type="submit" name="submit">Tambah Data</button>
+			<button type="submit" name="tambah">Tambah Data</button>
 			<button type="submit">
 				<a href="index.php" style="text-decoration: none; color: black;">Kembali</a>
 			</button>
