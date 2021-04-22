@@ -48,6 +48,7 @@ if(isset($_POST["cari"]) ) {
     </style>
 </head>
 <body>
+    <h1>SHU MX SHOP</h1>
 	<div class="add">
      <a href="tambah.php"><button>Tambah Data</button></a>
      <form action="" method="post"> <br>
